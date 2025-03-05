@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <form id="login" method="post" action="server.php">
+        <fieldset class="tabel" style="width: 90%;">
+            <legend><strong>Login utilizator</strong></legend>
+            <table cellspacing="10">
+                <tr>
+                    <td align="right"><label for="nume-persoana">Nume utilizator:</label></td>
+                    <td><input type="text" id="nume-persoana" name="nume" size="30" 
+                               required placeholder="Numele utilizatorului"
+                               title="Introduceți un nume valid!"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="parola-persoana">Parola:</label></td>
+                    <td><input type="password" id="parola-persoana" name="parola" size="30" 
+                               required placeholder="Parola utilizator"
+                               title="Introduceți parola"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td align="left">
+                        <button class="buton" type="submit">LOGIN</button>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+</html>
