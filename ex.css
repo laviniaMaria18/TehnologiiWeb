@@ -1,0 +1,72 @@
+h1 {
+    background-color: aliceblue;
+    text-align: center;
+}
+h2{
+    color: rgb(124,154,154);
+}
+.paragraf{
+    color:brown;
+    border: 2px;
+}
+.buton{
+    color: black;
+    background-color: grey;
+    border: 4px solid #333
+    border-color: black;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); 
+
+}
+.linieTabel
+{
+    background-color: white;
+}
+div {
+  border: 2px solid gray;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 100px;
+  margin-left: 10px;
+  box-shadow: 5px 10px 8px #888888;
+  padding: 10px;
+
+}
+.borderColor
+{
+    border-color:brown;
+    width: 500px;
+}
+body{
+    font-family: Verdana;
+}
+.table1 th,
+.table1 td {
+  border: 1px solid;
+  padding: 10px;
+
+}
+.table1 {
+  width: 500px;
+  border-collapse: collapse;
+  background-color: aliceblue;
+
+
+}
+
+.header1
+{
+    background-color: slategray;
+}
+
+.formularTitlu
+{
+    text-align: right;
+    font-size: 13px;
+    vertical-align: top;
+}
+.borderFormular input {
+  font-weight: bold; 
+  border: 2px solid #333; 
+  padding: 5px;
+  font-size: 10px
+

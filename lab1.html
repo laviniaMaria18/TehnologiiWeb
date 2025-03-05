@@ -3,6 +3,7 @@
 	<head>
 		<title></title>
 		<body style="font-family: Verdana;">
+		<link rel="stylesheet" href="ex.css">
 
 	</head>
 	<body>
@@ -16,19 +17,19 @@
 
 					<h2>Detalii proiect</h2>
 
-					<p><strong>Descriere proiect:</strong> aplicatie web care permite gestionarea situatiei academice a studentilor intr-o universitate, oferind acces securizat profesorilor, studentilor si secretarilor la informatiile legate de notele obtinute la examene si evaluari pe parcurs. Aplicatia va permite generarea de rapoarte specifice, in functie de necesitatile participantilor. Atat studenții cat si profesorii vor primi notificari despre modificarile notelor sau evaluarilor recente.</p>
+					<p><strong>Descriere proiect:</strong> aplicatie web care permite gestionarea situatiei academice a studentilor intr-o universitate, oferind acces securizat profesorilor, studentilor si secretarilor la informatiile legate de notele obtinute la examene si evaluari pe parcurs. Aplicatia va permite generarea de rapoarte specifice, in functie de necesitatile participantilor. Atat studentii cat si profesorii vor primi notificari despre modificarile notelor sau evaluarilor recente.</p>
 
-					<table border="1" cellspacing="0" cellpadding="10" bgcolor="aliceblue" style="width:500px;">
+					<table class="table1">
     				<caption>Echipa Proiect</caption>
-    					<thead bgcolor="slategray">
+    					<thead class="header1">
        		 				<tr>
             					<th>Nr</th>
-            					<th>Nume</th>
-            					<th>Functie</th>
+            					<th >Nume</th>
+            					<th >Functie</th>
        		 				</tr>
     					</thead>
    		 				<tbody>
-        					<tr>
+        					<tr class="linieTabel">
             					<td>1</td>
             					<td>Popescu Marian</td>
            			 			<td>Manager Proiect</td>
@@ -38,7 +39,7 @@
             					<td>Apetrei Diana</td>
             					<td>Tester</td>
         					</tr>
-        					<tr>
+        					<tr class="linieTabel">
             					<td>3</td>
             					<td>Sandu Raluca</td>
             					<td>Programator</td>
@@ -57,43 +58,45 @@
 
 		
 
-			<h2>Lista erori</h2>
-		<p><strong>Eroare afisare tabel</strong></p>
+		<h2>Lista erori</h2>
+		<div><p class="paragraf"><strong>Eroare afisare tabel</strong></p>
 		<p>In pagina administratorului, modul de afisare al tabelului cu datele utilizatorilor nu este conform cu specificatia.</p>
 		<p><strong>Raportat de: </strong> Apetrei Diana</p>
-		<p><strong>Data: </strong> 12 Aprilie 2025</p>
+		<p><strong>Data: </strong> 12 Aprilie 2025</p> </div>
 
-		<hr>
-		<p><strong>Eroare login </strong></p>
+
+		<div>
+		<p class="paragraf"><strong>Eroare login </strong></p>
 		<p>Utilizatorul se poate inregistra cu parola reintrodusa gresit: daca in pagina de inregistrare se completeaza parola si in campul in care se cere reintroducerea parolei se completeaza alta parola, nu se afiseaza utilizatorului o eroare si inregistrarea se finalizeaza.</p>
 		<p><strong>Raportat de:</strong> Popescu Marian</p>
 		<p><strong>Data:</strong> 12 Aprilie 2025</p>
-		<hr>
+		</div>
 
 		<section>
+		<h2>Adauga eroare</h2>
 		<form id="login" method="post" action="server.php">
-    	<fieldset style="width:500px;">
-        <legend>Adaugare eroare</legend>
+    	<fieldset  class="borderColor">
+        <legend class="paragraf"><strong>Descriere eroare<strong></legend>
         
-        <table cellspacing="10">
+        <table class="table2">
             <tr>
-                <td align="right"><label for="nume-persoana">Titlu:</label></td>
-                <td><input type="text" id="nume-persoana" name="nume" size="30" 
+                <td class="formularTitlu"><label for="nume-persoana">Titlu:</label></td>
+                <td class="borderFormular"><input type="text" id="nume-persoana" name="nume" size="30" 
                            pattern="[A-Z][a-z]+([ '-][A-Z][a-z]+)*" required 
                            placeholder="Dati un titlu"
                            title="Introduceți un nume valid!"></td>
             </tr>
             <tr>
-                <td align="right" valign="top"><label for="descriere">Descriere:</label></td>
-                <td><textarea id="descriere" name="descriere" cols="33" rows="6" maxlength="150"></textarea></td>
+                <td class="formularTitlu" ><label for="descriere">Descriere:</label></td>
+                <td ><textarea id="descriere" name="descriere" cols="33" rows="6" maxlength="150"></textarea></td>
 
 
            	</tr>
            	<tr>
        
-       			 <td></td>
-        		<td align="left">
-            		<button type="submit">Raporteaza</button></td>
+       			 <td class="formular"></td>
+        		<td class="formularButon" align="left">
+            		<button class="buton" type="submit">Raporteaza</button></td>
     		</tr>
 
             
