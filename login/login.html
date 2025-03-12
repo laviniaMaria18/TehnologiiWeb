@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Beautiful Login Page</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login Utilizator</h2>
+    <form id="login" method="post" action="server.php">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="nume-persoana">Nume utilizator:</label>
+          <input type="text" id="nume-persoana" name="nume" required placeholder="Numele utilizatorului">
+        </div>
+        <div class="form-group">
+          <label for="parola-persoana">Parola:</label>
+          <input type="password" id="parola-persoana" name="parola" required placeholder="Parola utilizator">
+        </div>
+      </div>
+      <div class="btn-container">
+        <button type="submit">LOGIN</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

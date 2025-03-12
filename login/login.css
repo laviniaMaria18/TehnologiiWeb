@@ -1,0 +1,94 @@
+/* Global reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styling using Flexbox for centering */
+body {
+  background: linear-gradient(135deg, #ffb6c1, #ffffff);
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Login container using Flexbox for overall layout */
+.login-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.login-container h2 {
+  color: #ff69b4;
+  margin-bottom: 10px;
+}
+
+/* Form grid using CSS Grid for form fields */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-group input {
+  padding: 12px;
+  border: 2px solid #ffb6c1;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #ff69b4;
+  box-shadow: 0 0 6px rgba(255, 105, 180, 0.5);
+  outline: none;
+}
+
+/* Button container using Flexbox */
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-container button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #ffb6c1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 6px rgba(255, 105, 180, 0.3);
+}
+
+.btn-container button:hover {
+  background-color: #ff69b4;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.4);
+}
+
+.btn-container button:active {
+  transform: translateY(0);
+}
