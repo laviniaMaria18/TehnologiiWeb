@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Catalog online</title>
+    <link rel="stylesheet" href="ex.css">
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Catalog online</h1>
+      </header>
+
+      <main class="main-content">
+        <article class="project-info">
+          <section class="project-details">
+            <h2>Detalii proiect</h2>
+            <p>
+              <strong>Descriere proiect:</strong> aplicatie web care permite gestionarea situației academice a studenților într-o universitate, oferind acces securizat profesorilor, studenților și secretarilor la informațiile legate de notele obținute la examene și evaluări pe parcurs. Aplicația va permite generarea de rapoarte specifice, în funcție de necesitățile participanților. Atât studenții cât și profesorii vor primi notificări despre modificările notelor sau evaluărilor recente.
+            </p>
+            <table class="table1">
+              <caption>Echipa Proiect</caption>
+              <thead class="header1">
+                <tr>
+                  <th>Nr</th>
+                  <th>Nume</th>
+                  <th>Functie</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="linieTabel">
+                  <td>1</td>
+                  <td>Popescu Marian</td>
+                  <td>Manager Proiect</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Apetrei Diana</td>
+                  <td>Tester</td>
+                </tr>
+                <tr class="linieTabel">
+                  <td>3</td>
+                  <td>Sandu Raluca</td>
+                  <td>Programator</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Radu Daniel</td>
+                  <td>Programator</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </article>
+
+        <section class="error-section">
+          <h2>Lista erori</h2>
+          <div class="error-container">
+            <div class="error-box">
+              <p class="paragraf"><strong>Eroare afisare tabel</strong></p>
+              <p>În pagina administratorului, modul de afișare al tabelului cu datele utilizatorilor nu este conform cu specificația.</p>
+              <p><strong>Raportat de: </strong> Apetrei Diana</p>
+              <p><strong>Data: </strong> 12 Aprilie 2025</p>
+            </div>
+
+            <div class="error-box">
+              <p class="paragraf"><strong>Eroare login</strong></p>
+              <p>Utilizatorul se poate înregistra cu parola reintrodusă greșit: dacă în pagina de înregistrare se completează parola și în câmpul în care se cere reintroducerea parolei se completează alta, nu se afișează utilizatorului o eroare și înregistrarea se finalizează.</p>
+              <p><strong>Raportat de: </strong> Popescu Marian</p>
+              <p><strong>Data: </strong> 12 Aprilie 2025</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h2>Adaugă eroare</h2>
+          <form id="login" method="post" action="server.php">
+            <fieldset class="borderColor">
+              <legend class="paragraf"><strong>Descriere eroare</strong></legend>
+              <table class="table2">
+                <tr>
+                  <td class="formularTitlu">
+                    <label for="nume-persoana">Titlu:</label>
+                  </td>
+                  <td class="borderFormular">
+                    <input type="text" id="nume-persoana" name="nume" size="30"
+                           pattern="[A-Z][a-z]+([ '-][A-Z][a-z]+)*" required 
+                           placeholder="Dă un titlu"
+                           title="Introduceți un nume valid!">
+                  </td>
+                </tr>
+                <tr>
+                  <td class="formularTitlu">
+                    <label for="descriere">Descriere:</label>
+                  </td>
+                  <td>
+                    <textarea id="descriere" name="descriere" cols="33" rows="6" maxlength="150"></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="formularButon" align="left">
+                    <button class="buton" type="submit">Raportează</button>
+                  </td>
+                </tr>
+              </table>
+            </fieldset>
+          </form>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
