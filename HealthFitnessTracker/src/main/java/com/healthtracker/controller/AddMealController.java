@@ -7,7 +7,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
-import java.sql.SQLException;
 import java.time.LocalDate;
 
 public class AddMealController {
@@ -31,12 +30,10 @@ public class AddMealController {
     @FXML
     private void saveMeal() {
         try {
-            // 1. Preluăm datele din câmpuri daca cumva sunt date neconforme se prinde eroarea
             LocalDate date = mealDatePicker.getValue();
             String description = descriptionField.getText();
             int calories = Integer.parseInt(caloriesField.getText());
 
-            //validare pt numarul de calorii, daca s a introdus o valoare suspecta se opreste si nu mai salveaza masa si afiseaza un popup
             if (calories > 10000) {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Valoare suspectă");
@@ -46,7 +43,6 @@ public class AddMealController {
                 return;
             }
 
-            // 2. Creăm obiectul Meal
             Meal meal = new Meal(
                     0,
                     loggedInUser.getId(),
@@ -74,7 +70,7 @@ public class AddMealController {
             if (msg != null && msg.contains("limita admisă")) {
                 alert.setContentText("️ Ai introdus prea multe calorii! Limita este 5000.");
             } else {
-                alert.setContentText("⚠️ " + msg);
+                alert.setContentText("!!!! " + msg);
             }
 
             alert.showAndWait();

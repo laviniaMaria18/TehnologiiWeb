@@ -14,7 +14,5 @@ public class ProgressLog {
     }
 
     public int getId() { return id; }
-    public int getUserId() { return userId; }
-    public String getEventType() { return eventType; }
-    public java.time.LocalDateTime getEventDate() { return eventDate; }
+
 }

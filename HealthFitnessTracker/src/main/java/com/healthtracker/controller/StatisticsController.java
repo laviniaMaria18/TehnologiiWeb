@@ -14,7 +14,6 @@ public class StatisticsController {
 
     @FXML
     public void initialize() {
-        // Ia datele din DAO
         Map<String, Integer> caloriesIn = StatisticsDAO.getTotalCaloriesByDate();
         Map<String, Integer> caloriesOut = StatisticsDAO.getTotalBurnedByDate();
 

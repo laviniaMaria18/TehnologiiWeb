@@ -49,7 +49,7 @@ public class MealXMLExporter {
             StreamResult result = new StreamResult(new File(filePath));
 
             transformer.transform(source, result);
-            System.out.println("✅ Export XML complet: " + filePath);
+            System.out.println(" Export XML complet: " + filePath);
 
         } catch (ParserConfigurationException | TransformerException e) {
             e.printStackTrace();

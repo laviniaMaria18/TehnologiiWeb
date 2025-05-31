@@ -10,10 +10,7 @@ public class ExerciseDAO {
 
     public static void addExercise(Exercise exercise) {
         String sql = "INSERT INTO exercises (user_id, exercise_date, type, duration_min, calories_burned) VALUES (?, ?, ?, ?, ?)";
-//valorile pt ?? vor fi trimise prin stmt.set
-        //PreparedStatement->Evită erori de sintaxă ? nu e lipit in query ci trimis separat catre driverul postrgre
-        //stie exact ca password e o valoare un string nu cod sql
-        //adica va cauta text timplu nu cod sql
+
         try (Connection conn = DatabaseManager.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 

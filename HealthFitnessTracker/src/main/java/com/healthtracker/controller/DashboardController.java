@@ -79,6 +79,13 @@ public class DashboardController {
     private Button checkCaloriesButton;
 
 
+    @FXML
+    private Button openRecommendationsButton;
+
+    @FXML
+    private Button openProfileButton;
+    @FXML
+    private Button openRecipesButton;
 
 
     private User loggedInUser;
@@ -119,15 +126,17 @@ public class DashboardController {
         if (checkCaloriesButton != null) {
             checkCaloriesButton.setOnAction(e -> checkTotalCalories());
         }
+        if (openRecommendationsButton != null) {
+            openRecommendationsButton.setOnAction(e -> openRecommendationsWindow());
+        }
+        if (openProfileButton != null) {
+            openProfileButton.setOnAction(e -> openProfileWindow());
+        }
+        if (openRecipesButton != null) {
+            openRecipesButton.setOnAction(e -> openRecipesWindow());
+        }
 
 
-
-
-
-
-
-
-        // Inițializare coloane tabel
         if (dateColumn != null) dateColumn.setCellValueFactory(new javafx.scene.control.cell.PropertyValueFactory<>("mealDate"));
         if (descriptionColumn != null) descriptionColumn.setCellValueFactory(new javafx.scene.control.cell.PropertyValueFactory<>("description"));
         if (caloriesColumn != null) caloriesColumn.setCellValueFactory(new javafx.scene.control.cell.PropertyValueFactory<>("calories"));
@@ -143,6 +152,7 @@ public class DashboardController {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/add_meal.fxml"));
             Scene scene = new Scene(loader.load());
+            scene.getStylesheets().add(getClass().getResource("/css/style.css").toExternalForm());
 
             AddMealController controller = loader.getController();
             controller.setLoggedInUser(loggedInUser);
@@ -158,6 +168,7 @@ public class DashboardController {
             e.printStackTrace();
         }
     }
+
 
 
     private void loadMeals() {
@@ -187,6 +198,8 @@ public class DashboardController {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/add_exercise.fxml"));
             Scene scene = new Scene(loader.load());
+            scene.getStylesheets().add(getClass().getResource("/css/style.css").toExternalForm());
+
 
             AddExerciseController controller = loader.getController();
             controller.setLoggedInUser(loggedInUser);
@@ -224,6 +237,8 @@ public class DashboardController {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/statistics.fxml"));
             Scene scene = new Scene(loader.load());
+            scene.getStylesheets().add(getClass().getResource("/css/style.css").toExternalForm());
+
 
             Stage stage = new Stage();
             stage.setTitle("Statistici: Calorii pe Zile");
@@ -292,12 +307,62 @@ public class DashboardController {
             alert.showAndWait();
         }
     }
+    private void openRecommendationsWindow() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/recommendations.fxml"));
+            Scene scene = new Scene(loader.load());
+            scene.getStylesheets().add(getClass().getResource("/css/style.css").toExternalForm());
 
 
+            RecommendationController controller = loader.getController();
+            controller.setLoggedInUser(loggedInUser);
+
+            Stage stage = new Stage();
+            stage.setTitle("Sugestii");
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private void openProfileWindow() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/profile.fxml"));
+            Scene scene = new Scene(loader.load());
+            scene.getStylesheets().add(getClass().getResource("/css/style.css").toExternalForm());
 
 
+            ProfileController controller = loader.getController();
+            controller.setLoggedInUser(loggedInUser);
+
+            Stage stage = new Stage();
+            stage.setTitle("Date Profil");
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 
+    private void openRecipesWindow() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/recipes.fxml"));
+            Scene scene = new Scene(loader.load());
+            scene.getStylesheets().add(getClass().getResource("/css/style.css").toExternalForm());
+
+
+            RecipeController controller = loader.getController();
+            controller.setLoggedInUser(loggedInUser);
+
+            Stage stage = new Stage();
+            stage.setTitle("Rețete sănătoase");
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 
 

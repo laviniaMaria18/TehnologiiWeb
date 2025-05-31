@@ -23,7 +23,6 @@ public class LoginController {
         loginButton.setOnAction(e -> handleLogin());
     }
 
-    //metoda care se executa cand se apasa butonul de login
     private void handleLogin() {
         String email = emailField.getText().trim();
         String password = passwordField.getText().trim();
@@ -36,12 +35,10 @@ public class LoginController {
 
         if (user != null) {
             try {
-                //creeaza fereastra noua aia unde e cu mesele etc
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/dashboard.fxml"));
                 Scene scene = new Scene(loader.load());
 
-                //obtine logica din sapte
-                //trimite utilizatorul logat catre dashboard
+
                 DashboardController controller = loader.getController();
                 controller.setLoggedInUser(user);
 

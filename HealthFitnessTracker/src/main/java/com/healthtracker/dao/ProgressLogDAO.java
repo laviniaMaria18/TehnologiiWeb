@@ -1,7 +1,6 @@
 package com.healthtracker.dao;
 
 import com.healthtracker.model.ProgressLog;
-import com.healthtracker.dao.DatabaseManager;
 
 import java.sql.*;
 import java.util.ArrayList;

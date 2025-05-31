@@ -4,7 +4,8 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Label?>
 
-<VBox xmlns="http://javafx.com/javafx/20"
+<VBox styleClass="popup-window"
+      xmlns="http://javafx.com/javafx/20"
       xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="com.healthtracker.controller.StatisticsController"
       alignment="CENTER" spacing="20" prefWidth="600" prefHeight="500"

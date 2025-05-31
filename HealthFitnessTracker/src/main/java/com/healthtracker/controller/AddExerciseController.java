@@ -9,9 +9,7 @@ import javafx.stage.Stage;
 
 public class AddExerciseController {
 
-    //leaga elem din .fxml cu variabila din controller
-    //fara nu va injecta contollerul si variabila va ramane null
-    //DatePicker calendarul si poti salva o data
+
     @FXML private DatePicker exerciseDatePicker;
     @FXML private TextField typeField;
     @FXML private TextField durationField;
@@ -20,18 +18,19 @@ public class AddExerciseController {
 
     private User loggedInUser;
 
-    public void setLoggedInUser(User user) {
-        this.loggedInUser = user;
-    }
 
     @FXML
     public void initialize() {
         saveButton.setOnAction(e -> saveExercise());
     }
 
+    public void setLoggedInUser(User user) {
+        this.loggedInUser = user;
+    }
+
+
     private void saveExercise() {
         if (loggedInUser == null) return;
-//id 0 nu este inserat in baza de date  va fi generat automat de baza de date ,baza de date genereaza un id
         try {
             Exercise exercise = new Exercise(
                     0,
@@ -43,7 +42,6 @@ public class AddExerciseController {
             );
             ExerciseDAO.addExercise(exercise);
 
-            //se inchide fereastra dupa salvare
             ((Stage) saveButton.getScene().getWindow()).close();
 
         } catch (Exception ex) {

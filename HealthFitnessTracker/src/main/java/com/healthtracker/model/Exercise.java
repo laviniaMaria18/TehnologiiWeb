@@ -1,5 +1,4 @@
 package com.healthtracker.model;
-
 import java.time.LocalDate;
 
 public class Exercise {
@@ -27,9 +26,5 @@ public class Exercise {
     public int getCaloriesBurned() { return caloriesBurned; }
 
     public void setId(int id) { this.id = id; }
-    public void setUserId(int userId) { this.userId = userId; }
-    public void setExerciseDate(LocalDate exerciseDate) { this.exerciseDate = exerciseDate; }
-    public void setType(String type) { this.type = type; }
-    public void setDurationMin(int durationMin) { this.durationMin = durationMin; }
-    public void setCaloriesBurned(int caloriesBurned) { this.caloriesBurned = caloriesBurned; }
+
 }
